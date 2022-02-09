@@ -43,7 +43,7 @@ namespace AzureCrud
                     connection.Open();
                     if (String.IsNullOrEmpty(input.Description))
                     {
-                        var query = $"INSERT INTO [TaskList] (Description,CreatedOn,IsDone) VALUES('{input.Description}', '{input.CreatedOn}' , '{false}')";
+                        var query = $"INSERT INTO [Employee] (Name,LastName,Age) VALUES('{input.Description}', '{input.CreatedOn}' , '{false}')";
                         SqlCommand command = new SqlCommand(query, connection);
                         command.ExecuteNonQuery();
                     }
